@@ -3,6 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SidSerperior.iml" filepath="$PROJECT_DIR$/.idea/SidSerperior.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.iml" filepath="$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Discord/SidSerperior.Discord.iml" filepath="$PROJECT_DIR$/.idea/modules/Discord/SidSerperior.Discord.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Discord/SidSerperior.Discord.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Discord/SidSerperior.Discord.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Discord/SidSerperior.Discord.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Discord/SidSerperior.Discord.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SidSerperior.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SidSerperior.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SidSerperior.test.iml" filepath="$PROJECT_DIR$/.idea/modules/SidSerperior.test.iml" />
     </modules>
   </component>
 </project>

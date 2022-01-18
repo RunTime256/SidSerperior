@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Discord:test" external.linked.project.path="$MODULE_DIR$/../../../Discord" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="SidSerperior" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output-test url="file://$MODULE_DIR$/../../../Discord/build/classes/java/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../Discord/src/test" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="SidSerperior.Discord.main" />
+    <orderEntry type="module" module-name="SidSerperior.Database.main" />
+    <orderEntry type="library" name="Gradle: org.mybatis:mybatis:3.5.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.postgresql:postgresql:42.3.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.checkerframework:checker-qual:3.5.0" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="SidSerperior.Discord.main" />
+</module>
