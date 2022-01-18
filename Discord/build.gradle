@@ -8,4 +8,5 @@ repositories {
 
 dependencies {
     implementation project(':Database')
+    implementation 'org.javacord:javacord:3.3.2'
 }

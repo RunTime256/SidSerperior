@@ -1,5 +1,6 @@
 package bot;
 
+import bot.api.BotApi;
 import sql.Session;
 import sql.SessionFactory;
 import sql.repository.BotRepository;
@@ -25,5 +26,9 @@ public class BotRunner {
         {
             token = BotRepository.getToken(name, session);
         }
+
+        BotApi api = new BotApi(token);
+        api.join();
+        api.configureCommands();
     }
 }
