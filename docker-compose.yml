@@ -1,0 +1,15 @@
+services:
+  localdb:
+    image: 'docker.io/bitnami/postgresql:11-debian-10'
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_POSTGRES_PASSWORD=postgres
+      - POSTGRESQL_USERNAME=dbuser
+      - POSTGRESQL_DATABASE=postgres
+      - POSTGRESQL_PASSWORD=a1b2c3d4
+    volumes:
+      - 'localdb:/bitnami/postgresql'
+volumes:
+  localdb:
+    driver: local
