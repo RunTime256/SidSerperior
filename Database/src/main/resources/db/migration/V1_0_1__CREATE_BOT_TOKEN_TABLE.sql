@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS bot.token (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    token VARCHAR NOT NULL,
+    is_active BOOLEAN NOT NULL
+);
