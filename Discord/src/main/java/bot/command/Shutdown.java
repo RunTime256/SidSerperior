@@ -7,6 +7,7 @@ import org.javacord.api.interaction.SlashCommandBuilder;
 import org.javacord.api.interaction.SlashCommandInteraction;
 import org.javacord.api.interaction.SlashCommandPermissionType;
 import org.javacord.api.interaction.SlashCommandPermissionsUpdater;
+import sql.Session;
 
 public class Shutdown extends Command
 {
@@ -19,10 +20,11 @@ public class Shutdown extends Command
                         .createForServer(server).join(),
                 Shutdown::execute);
         new SlashCommandPermissionsUpdater(server)
-                .addPermission(server.getOwnerId(), SlashCommandPermissionType.USER, true).update(slashCommand.getId());
+                .addPermission(server.getOwnerId(), SlashCommandPermissionType.USER, true)
+                .update(slashCommand.getId());
     }
 
-    private static void execute(DiscordApi discordApi, SlashCommandCreateEvent event) {
+    private static void execute(DiscordApi discordApi, SlashCommandCreateEvent event, Session session) {
         SlashCommandInteraction interaction = event.getSlashCommandInteraction();
         interaction.createImmediateResponder()
                 .setContent("Shutting down...")

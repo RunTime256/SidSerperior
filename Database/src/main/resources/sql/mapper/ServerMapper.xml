@@ -4,4 +4,8 @@
     <select id="getServerId" resultType="Long">
         SELECT server_id FROM bot.server WHERE name = #{serverName}
     </select>
+
+    <select id="getAllServerIds" resultType="Long">
+        SELECT server_id FROM bot.server
+    </select>
 </mapper>

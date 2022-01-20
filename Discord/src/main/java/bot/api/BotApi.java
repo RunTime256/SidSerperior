@@ -1,5 +1,6 @@
 package bot.api;
 
+import bot.command.ClearSlashCommands;
 import bot.command.Command;
 import bot.command.CommandExecution;
 import bot.command.Shutdown;
@@ -9,6 +10,7 @@ import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.entity.server.Server;
 import org.javacord.api.interaction.SlashCommandInteraction;
 import sql.Session;
+import sql.SessionFactory;
 import sql.repository.ServerRepository;
 
 import java.util.*;
@@ -47,14 +49,17 @@ public class BotApi {
                         .respond();
                 return;
             }
-            execution.execute(discordApi, event);
+            execution.execute(discordApi, event, SessionFactory.getSession());
         });
     }
 
     private void initCommandList(Session session)
     {
         Server devServer = getDevServerId(session);
-        commands = Arrays.asList(new Shutdown(devServer));
+        commands = Arrays.asList(
+                new Shutdown(devServer),
+                new ClearSlashCommands(devServer)
+        );
     }
 
     private Server getDevServerId(Session session)

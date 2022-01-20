@@ -1,6 +1,5 @@
 package bot.command;
 
-import org.javacord.api.DiscordApi;
 import org.javacord.api.interaction.SlashCommand;
 
 public abstract class Command
