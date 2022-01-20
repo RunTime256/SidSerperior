@@ -3,16 +3,20 @@ package bot.api;
 import bot.command.Command;
 import bot.command.CommandExecution;
 import bot.command.Shutdown;
+import bot.exception.ConfigurationException;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
+import org.javacord.api.entity.server.Server;
 import org.javacord.api.interaction.SlashCommandInteraction;
+import sql.Session;
+import sql.repository.ServerRepository;
 
 import java.util.*;
 
 public class BotApi {
     private final String token;
+    private final Map<Long, CommandExecution> commandExecution;
     private DiscordApi discordApi;
-    private Map<Long, CommandExecution> commandExecution;
     private List<Command> commands;
 
     public BotApi(String token)
@@ -27,9 +31,9 @@ public class BotApi {
         discordApi = new DiscordApiBuilder().setToken(token).login().join();
     }
 
-    public void configureCommands()
+    public void configureCommands(Session session)
     {
-        initCommandList();
+        initCommandList(session);
         for (Command command: commands)
         {
             commandExecution.put(command.getCommandId(), command.getExecution());
@@ -47,8 +51,19 @@ public class BotApi {
         });
     }
 
-    private void initCommandList()
+    private void initCommandList(Session session)
     {
-       commands = Arrays.asList(new Shutdown(discordApi));
+        Server devServer = getDevServerId(session);
+        commands = Arrays.asList(new Shutdown(devServer));
+    }
+
+    private Server getDevServerId(Session session)
+    {
+        Long serverId = ServerRepository.getServerId("developer", session);
+        if (serverId == null)
+            throw new ConfigurationException("Could not obtain development server ID from database");
+
+        return discordApi.getServerById(serverId).orElseThrow(() ->
+                new ConfigurationException("Could not obtain development server from API"));
     }
 }

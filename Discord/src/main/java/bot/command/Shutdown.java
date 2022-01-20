@@ -1,19 +1,25 @@
 package bot.command;
 
 import org.javacord.api.DiscordApi;
+import org.javacord.api.entity.server.Server;
 import org.javacord.api.event.interaction.SlashCommandCreateEvent;
 import org.javacord.api.interaction.SlashCommandBuilder;
 import org.javacord.api.interaction.SlashCommandInteraction;
+import org.javacord.api.interaction.SlashCommandPermissionType;
+import org.javacord.api.interaction.SlashCommandPermissionsUpdater;
 
 public class Shutdown extends Command
 {
-    public Shutdown(DiscordApi discordApi)
+    public Shutdown(Server server)
     {
         super(new SlashCommandBuilder()
                         .setName("shutdown")
                         .setDescription("Shuts down the bot")
-                        .createGlobal(discordApi).join(),
+                        .setDefaultPermission(false)
+                        .createForServer(server).join(),
                 Shutdown::execute);
+        new SlashCommandPermissionsUpdater(server)
+                .addPermission(server.getOwnerId(), SlashCommandPermissionType.USER, true).update(slashCommand.getId());
     }
 
     private static void execute(DiscordApi discordApi, SlashCommandCreateEvent event) {

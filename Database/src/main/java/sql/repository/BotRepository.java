@@ -4,7 +4,8 @@ import sql.Session;
 import sql.mapper.BotMapper;
 
 public class BotRepository {
-    private BotRepository() {
+    private BotRepository()
+    {
     }
 
     public static String getToken(String botName, Session session)
