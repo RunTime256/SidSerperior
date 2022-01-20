@@ -1,2 +1,3 @@
+include 'Commons'
 include 'Database'
 include 'Discord'

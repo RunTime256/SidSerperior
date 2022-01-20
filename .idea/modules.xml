@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SidSerperior.iml" filepath="$PROJECT_DIR$/.idea/SidSerperior.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Commons/SidSerperior.Commons.iml" filepath="$PROJECT_DIR$/.idea/modules/Commons/SidSerperior.Commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Commons/SidSerperior.Commons.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Commons/SidSerperior.Commons.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Commons/SidSerperior.Commons.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Commons/SidSerperior.Commons.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.iml" filepath="$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Database/SidSerperior.Database.test.iml" />

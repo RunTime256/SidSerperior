@@ -9,6 +9,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="SidSerperior.Database.main" />
+    <orderEntry type="module" module-name="SidSerperior.Commons.main" />
     <orderEntry type="library" name="Gradle: org.mybatis:mybatis:3.5.9" level="project" />
     <orderEntry type="library" name="Gradle: org.javacord:javacord-api:3.3.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.postgresql:postgresql:42.3.1" level="project" />

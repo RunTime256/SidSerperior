@@ -8,6 +8,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="SidSerperior.Database.main" />
     <orderEntry type="library" name="Gradle: org.mybatis:mybatis:3.5.9" level="project" />
+    <orderEntry type="module" module-name="SidSerperior.Commons.main" />
     <orderEntry type="library" name="Gradle: org.postgresql:postgresql:42.3.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.checkerframework:checker-qual:3.5.0" level="project" />
   </component>

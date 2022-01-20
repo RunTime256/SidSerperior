@@ -20,7 +20,9 @@
         </environment>
     </environments>
     <mappers>
+        <mapper resource="sql/mapper/ModelMapper.xml"/>
         <mapper resource="sql/mapper/BotMapper.xml"/>
         <mapper resource="sql/mapper/ServerMapper.xml"/>
+        <mapper resource="sql/mapper/LogChannelMapper.xml"/>
     </mappers>
 </configuration>
